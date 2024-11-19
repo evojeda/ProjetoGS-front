@@ -1,5 +1,6 @@
 import React from 'react'
 import {SobreStyle} from "../css/SobreStyle"
+import QuizGame from '../components/QuizGame';
 
 const Sobre = () => {
   return (
@@ -25,11 +26,10 @@ const Sobre = () => {
         </p>
       </div>
       <div className="quiz">
-        <h2>Quiz Game</h2>
-        <p>Pergunta</p>
-        <p>Resposta</p>
-      </div>
+          <QuizGame />
+        </div>
     </div>
+
     </SobreStyle>
   )
 }
