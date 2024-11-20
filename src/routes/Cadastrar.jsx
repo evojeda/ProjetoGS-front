@@ -1,6 +1,6 @@
 
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CadastrarStyle } from '../css/CadastrarStyle'
 import Logo from '../images/logo-renewableenergytech.png'
@@ -11,10 +11,10 @@ import IconeEmail from '../images/o-email.png'
 import IconeSenha from '../images/cadeado.png'
 
 const Cadastrar = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
