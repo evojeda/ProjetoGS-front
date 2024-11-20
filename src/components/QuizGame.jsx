@@ -1,6 +1,6 @@
 // src/components/QuizGame.jsx
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const QuizGame = () => {
   const questions = [
@@ -56,11 +56,11 @@ const QuizGame = () => {
     }
   ];
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
-  const [incorrectAnswers, setIncorrectAnswers] = useState([]);
-  const [showScore, setShowScore] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [score, setScore] = useState(0)
+  const [incorrectAnswers, setIncorrectAnswers] = useState([])
+  const [showScore, setShowScore] = useState(false)
+  const [selectedOption, setSelectedOption] = useState("")
 
   const handleAnswerSubmit = () => {
     const question = questions[currentQuestion];
@@ -71,7 +71,7 @@ const QuizGame = () => {
       setIncorrectAnswers([...incorrectAnswers, { ...question, userAnswer: selectedOption }]);
     }
 
-    setSelectedOption(""); // Limpa a seleção
+    setSelectedOption(""); 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
@@ -199,4 +199,4 @@ const ScoreSection = styled.div`
     margin-bottom: 15px;
     line-height: 1.5;
   }
-`;
+`

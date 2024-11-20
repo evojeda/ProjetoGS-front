@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import { NavStyle } from '../css/NavStyle'
 import LogoImage from '../images/logo-renewableenergytech.png'
 import IconeUser from '../images/usuario-icone.png'
