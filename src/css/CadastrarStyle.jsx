@@ -39,11 +39,13 @@ html, body {
 .img-logo {
     display: flex;
     justify-content: center;
+    
 }
 
 .img-logo img{
     width: 150px;
     height: auto;
+    margin-top: 40px;
 }
 
 .msg-inicio {

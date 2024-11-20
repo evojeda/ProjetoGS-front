@@ -1,10 +1,17 @@
 import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import { NavStyle } from '../css/NavStyle'
 import LogoImage from '../images/logo-renewableenergytech.png'
 import IconeUser from '../images/usuario-icone.png'
 import IconeSair from '../images/sair-do-usuario.png'
 
 const Nav =()=>{
+  const navigate = useNavigate(); 
+  const handleLogout = () => {
+
+    navigate('/login')
+  }
+
     return(
         <NavStyle>       
         <header className="header">
@@ -24,7 +31,7 @@ const Nav =()=>{
                     </div>
                 </Link>
           </div>
-              <div className='icone-sair'>
+              <div className='icone-sair' onClick={handleLogout}>
                 <img src={IconeSair} alt="Sair da pagina" />
               </div>
         </header>

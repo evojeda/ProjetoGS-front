@@ -44,6 +44,7 @@ export const LoginStyle = styled.div`
 .img-logo img {
   width: 150px;
   height: auto;
+  margin-bottom: 42px;
 }
 
 

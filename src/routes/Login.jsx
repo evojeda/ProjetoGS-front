@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { LoginStyle } from '../css/LoginStyle'
 import Logo from '../images/logo-renewableenergytech.png'
 import FullImage from  '../images/image-login.jpg'
@@ -11,11 +12,14 @@ const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
+    console.log('Email:', email)
+    console.log('Password:', password)
+
+    navigate('/')
   };
 
   return (

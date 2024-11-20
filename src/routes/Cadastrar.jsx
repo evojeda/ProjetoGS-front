@@ -1,5 +1,7 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { CadastrarStyle } from '../css/CadastrarStyle'
 import Logo from '../images/logo-renewableenergytech.png'
 import ImageFull from '../images/image-cadastro.jpg'
@@ -9,6 +11,21 @@ import IconeEmail from '../images/o-email.png'
 import IconeSenha from '../images/cadeado.png'
 
 const Cadastrar = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log('Nome:', name)
+    console.log('Email:', email)
+    console.log('Senha:', password)
+
+    navigate('/')
+  }
+
   return (
     <CadastrarStyle>
     <div className='container-cadastro'>
@@ -26,12 +43,12 @@ const Cadastrar = () => {
         <p>Faça seu cadastro</p>
 
         <div className='form-cadastro'>
-          <form id="signup-form">
+          <form onSubmit={handleSubmit} id="signup-form">
             <div className="form-group">
               <label htmlFor="name"></label>
               <div className="input1">
                   <img src={IconePerfil} alt="Ícone Perfil" className="input-icon" />
-                  <input type="text" id="name" name="name" placeholder="Digite seu nome" require />
+                  <input type="text" id="name" name="name" placeholder="Digite seu nome" required />
                 </div>
             </div>
 
@@ -39,7 +56,7 @@ const Cadastrar = () => {
               <label htmlFor="email"></label>
               <div className="input2">
                   <img src={IconeEmail} alt="Ícone Email" className="input-icon2" />
-                  <input type="text" id="email" name="email" placeholder="Digite seu e-mail" require />
+                  <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required />
                 </div>
             </div>
 
